@@ -6,10 +6,12 @@ const cors = require('cors');
 
 const app = express();
 
-const server = require('http').Server(app);
+const http = require('http')
+const server = http.createServer(app);
 
 app.use(cors({
     origin: "https://real-time-chat-app-zstem.netlify.app/",
+    preflightContinue: false,
     credentials: true,
   }));
 
