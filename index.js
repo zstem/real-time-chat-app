@@ -9,19 +9,15 @@ const app = express();
 const http = require('http')
 const server = http.createServer(app);
 
-app.use(cors({
-    origin: "https://real-time-chat-app-zstem.netlify.app/",
-    preflightContinue: false,
-    credentials: true,
-  }));
+app.use(cors());
 
-app.use(function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Credentials', 'true');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, OPTIONS');
-    res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
-    next();
-});
+// app.use(function(req, res, next) {
+//     res.header('Access-Control-Allow-Origin', '*');
+//     res.header('Access-Control-Allow-Credentials', 'true');
+//     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, OPTIONS');
+//     res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
+//     next();
+// });
 
 // app.prependListener("request", (req, res) => {
 //     res.setHeader("Access-Control-Allow-Origin", "*");
