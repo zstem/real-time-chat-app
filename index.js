@@ -13,7 +13,7 @@ const server = require('http').Server(app);
 //     credentials: true,
 //   }));
 
-app.use('/', function(req, res, next) {
+app.all('/', function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Credentials', 'true');
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, OPTIONS');
@@ -21,7 +21,7 @@ app.use('/', function(req, res, next) {
     next();
 });
 
-app.use((req, res) => res.sendFile('/index.html', { root: __dirname }))
+//app.use((req, res) => res.sendFile('/index.html', { root: __dirname }))
 
 
 const io = require('socket.io')(server);
