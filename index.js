@@ -3,12 +3,16 @@ const cors = require('cors');
 const app = express();
 const http = require('http')
 const server = http.createServer(app);
-const io = require('socket.io')(server);
+const io = require('socket.io')(server, {
+    cors: {
+      origin: '*',
+      credentials: true
+    }
+  });
 const port = process.env.PORT || 3000;
 
-app.use(cors({
-    origin: '*'
-}));
+server.listen(port, () => console.log('App is listening on port ' + port));
+
 
 io.on('connection', (socket) => {
     console.log('user ' + socket.id +' connected.');
@@ -37,4 +41,3 @@ app.post('/', (req, res) => {
     res.send('Successful response to POST.');
 });
 
-server.listen(port, () => console.log('App is listening on port ' + port));
