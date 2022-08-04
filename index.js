@@ -1,15 +1,13 @@
 const { application } = require('express');
 const express = require('express');
+const http = require('http');
 
-const io = require('socket.io')(8080, {
-    cors: {
-        origin: ['https://real-time-chat-app-zstem.netlify.app/'],
-    },
-});
+const socketio = require('socket.io');
 
 const app = express();
-
+const server = http.createServer(app);
 const port = process.env.PORT || 3000;
+const io = socketio(server);
 
 
 
