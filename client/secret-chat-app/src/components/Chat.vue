@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router';
 import { io } from 'socket.io-client';
 import { ref } from 'vue';
 
-const socket = io();
+const socket = io('https://real-time-chat-app-zack.herokuapp.com/');
 
 const messages = ref([]);
 
