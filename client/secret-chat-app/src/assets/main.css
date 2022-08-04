@@ -1,0 +1,111 @@
+@import "./base.css";
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+.row {
+  margin-top: 2rem;
+}
+
+.bordered {
+  width: 50rem;
+  height: 40rem;
+  border: 0.5rem solid rgb(128, 0, 255);
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.centered2 {
+  display: flex;
+  justify-content: center;
+}
+
+.purple {
+  color: rgb(128, 0, 255);
+}
+
+.chat-message {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.dark {
+  color: rgb(128, 0, 255);
+  background-color: black;
+  height: 3.5rem;
+  width: 100rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+
+button {
+  color: rgb(128, 0, 255);
+  background-color: black;
+  height: 3.5rem;
+  width: 10rem;
+  font-size: 1.5rem;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+
+.send {
+  color: rgb(128, 0, 255);
+  background-color: black;
+  height: 3.5rem;
+  width: 10rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+
+.inputUsername {
+  width: 20rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: rgb(128, 0, 255);
+}
+
+h3 {
+  font-weight: bold;
+  color: rgb(128, 0, 255);
+}
+
+.chat-box {
+  margin-top: 30px;
+  border: 2px solid rgb(128, 0, 255);
+  border-radius: 10px;
+  min-width: 30rem;
+  min-height: 40rem;
+}
+
+.input-text {
+  color: rgb(128, 0, 255);
+  background-color: black;
+  height: 3.5rem;
+  width: 23rem;
+  font-size: 1.5rem;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+
+.input-text::placeholder {
+  color: rgb(71, 6, 118);
+ 
+}
+
+
+
+
+
