@@ -1,21 +1,17 @@
 const express = require('express');
 
-const http = require('http');
+
 
 const cors = require('cors');
 
 const app = express();
 
-const server = http.createServer(app);
+const server = require('http').Server(app);
 
 app.use(cors);
 
 
-const io = require('socket.io')(server, {
-    cors: {
-        origin: ['https://real-time-chat-app-zstem.netlify.app/'],
-    },
-});
+const io = require('socket.io')(server);
 
 
 
@@ -50,4 +46,4 @@ app.post('/', (req, res) => {
     res.send('Successful response to POST.');
 });
 
-app.listen(port, () => console.log('App is listening on port ' + port));
+server.listen(port, () => console.log('App is listening on port ' + port));
