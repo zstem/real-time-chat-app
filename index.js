@@ -8,6 +8,8 @@ const app = express();
 
 const server = http.createServer(app);
 
+app.use(cors);
+
 
 const io = require('socket.io')(server, {
     cors: {
@@ -15,7 +17,7 @@ const io = require('socket.io')(server, {
     },
 });
 
-app.use(cors({ origin: 'https://real-time-chat-app-zstem.netlify.app/', credentials: true }))
+
 
 const port = process.env.PORT || 3000;
 
