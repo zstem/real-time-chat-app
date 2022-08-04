@@ -9,7 +9,7 @@ const app = express();
 const http = require('http')
 const server = http.createServer(app);
 
-app.use(cors({origin: 'http://localhost:8080'}));
+app.use(cors({origin: 'https://real-time-chat-app-zack.herokuapp.com/'}));
 
 // app.use(function(req, res, next) {
 //     res.header('Access-Control-Allow-Origin', '*');
