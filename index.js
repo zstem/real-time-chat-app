@@ -9,7 +9,7 @@ const app = express();
 const server = require('http').Server(app);
 
 app.use(cors({
-    origin: "https://real-time-chat-app-zstem.netlify.app/",
+    //origin: "https://real-time-chat-app-zstem.netlify.app/",
     credentials: true,
   }));
 
