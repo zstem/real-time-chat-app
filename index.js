@@ -8,10 +8,10 @@ const app = express();
 
 const server = require('http').Server(app);
 
-app.use(cors({
-    //origin: "https://real-time-chat-app-zstem.netlify.app/",
-    credentials: true,
-  }));
+// app.use(cors({
+//     origin: "https://real-time-chat-app-zstem.netlify.app/",
+//     credentials: true,
+//   }));
 
 app.use(function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
