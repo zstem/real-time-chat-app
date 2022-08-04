@@ -1,0 +1,10 @@
+{
+  "name": "secret-chat-app",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "cd client/secret-chat-app && npm run dev && npm run backend",
+    "backend": "cd server && npm run start",
+    "preview": "vite preview --port 4173",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  }
+}
