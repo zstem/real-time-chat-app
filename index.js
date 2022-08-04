@@ -1,7 +1,7 @@
 
 const io = require('socket.io')(8080, {
     cors: {
-        origin: ['http://localhost:5173'],
+        origin: ['https://real-time-chat-app-zstem.netlify.app/'],
     },
 });
 
